@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Quiz</title>
+</head>
+<body>
+    <h2>Quiz</h2>
+    <p>Question 1: What is the capital of France?</p>
+    <button onclick="checkAnswer('Paris')">A. Paris</button><br>
+    <button onclick="checkAnswer('London')">B. London</button><br>
+    <button onclick="checkAnswer('Rome')">C. Rome</button><br>
+
+    <p id="quizResult"></p>
+    
+    <p>Question 2:Which country in Africa is the Pearl of Africa?</p>
+    <button onclick="check('Nigeria')">A. Nigeria</button><br>
+    <button onclick="check('Uganda')">B. Uganda</button><br>
+    <button onclick="check('Gabon')">C. Gabon</button><br>
+
+    <script>
+        let score = 0;
+
+        function checkAnswer(answer) {
+            if (answer === 'Paris') {
+                score++;
+                document.getElementById('quizResult').innerText = `Correct! Your score is: ${score}`;
+            } else {
+                document.getElementById('quizResult').innerText = `Wrong answer!`;
+            }
+        }
+
+        function check(answer) {
+            if (answer === 'Uganda') {
+                score++;
+                document.getElementById('quizResult').innerText = `Correct! Your score is: ${score}`;
+            } else {
+                document.getElementById('quizResult').innerText = `Wrong answer!`;
+            }
+        }
+        
+    </script>
+</body>
+</html>
